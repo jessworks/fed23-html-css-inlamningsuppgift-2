@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tough Cookie</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Jockey+One&family=Roboto+Condensed:wght@300;400&display=swap"   rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+<body>
+
+<!---HEADER--->
+
+  <header>
+    <input type="checkbox" class="burgerClick">
+    <div class="menu">
+      <button class="burger" aria-label="menu">
+        <span class="burgerBars"></span>
+        <span class="burgerBars"></span>
+        <span class="burgerBars"></span>
+      </button>
+      <nav>
+        <ul class="menuItems">
+          <li class="home">Home</li>
+          <li class="menu">Menu</li>
+          <li class="bookTable">Book table</li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Tough Cook<span class="desktopOnly">i</span><span class="desktopOnly">e</span></h1>
+  </header>
+
+  <main>
+
+<!---PAGE ONE--->
+
+    <div class="pageOne">
+      <div class="pageTitle">
+        <div class="pageTitleItems">
+          <span class="tahini">tahini</span>
+          <span class="drizzle">drizzle</span>
+          <span class="chickpeas">chickpeas</span>
+        </div>
+      </div>
+      <p class="bodyTextOne">Main course hemp seeds Southern Italian shiitake mushrooms a delicious meal banana bread lemon tahini dressing apple vinaigrette veggie burgers cool cucumbers coconut sugar. 
+        <span class=bodyTextOneNone>Seasonal edamame hummus asian pear kale bite sized ghost pepper one bowl mediterranean luxury bowl cayenne Thai sun pepper.</span></p>
+      <div class="pageOneImage">
+        <img src="images/lettuce.jpg" alt="A head of lettuce." width="1920" height="2400" loading="lazy" class="imageLettuce">
+        <img src="images/arrow.svg" alt="" width="72" height="59" class="arrowLettuce">
+      </div>
+      <p class="bodyTextTwo">Crispy iceberg lettuce Caribbean red habanero blueberry chia seed jam overflowing berries roasted butternut squash basmati thyme hummus falafel bowl <span class=bodyTextTwoNone>cozy butternut cilantro lime vinaigrette heat mint potato chocolate cookie seeds samosa walnut mushroom tart. </span><span class="explore">Explore menu<a href="#pageTwo"><img src="images/arrow2.svg" width="34" height="30" alt="" class="arrowExplore"></a></span></p>
+    </div>
+    
+<!---PAGE TWO--->
+
+    <div class="pageTwo" id="pageTwo">
+        <img src="images/chickpea-salad.jpg" alt="Chickpea salad and pita in a bowl on a rustic wooden table." width="1920" height="2400" loading="lazy" class="mealImageOne">
+        <img src="images/pita-hummus.jpg" alt="Pita and a bowl of hummus on a rustic wooden table."  width="1976" height="1842" loading="lazy" class="mealImageTwo">
+        <img src="images/chiar-laban.jpg" alt="Chiar and laban and condiments against a blue backdrop." width="2920" height="2728"  loading="lazy" class="mealImageThree">
+      <ul class="mealList">
+        <li class="mealItem"><span class="mealName">Halloumi moklieh
+          <span class="mealPush newPurple"><span class=new>New!</span></span></span>
+          <span class="mealDescription">Deep-fried halloumi</span>
+          <span class="mealPrice">195 kr</span></li>
+        <li class="mealItem"><span class="mealName">Mojaddara</span>
+          <span class="mealDescription">Green lentils with rice and fried onions</span>
+          <span class="mealPrice">135 kr</span></li>
+        <li class="mealItem"><span class="mealName">Chiar & laban</span>
+          <span class="mealDescription">Lebanese spicy yoghurt with chopped cucumber</span>
+          <span class="mealPrice">95 kr</span></li>
+        <li class="mealItem"><span class="mealName">Warak inab</span>
+          <span class="mealDescription">Rice- and veggie-filled dolma with mint and lemon</span>
+          <span class="mealPrice">85 kr</span></li>
+        <li class="mealItem"><span class="mealName">Moutabbal batinzian
+          <span class="mealPush veganGreen"><span class="vegan">Vegan</span></span></span>
+          <span class="mealDescription">Smoked chopped aubergine, sesame paste, garlic and lemon</span>
+          <span class="mealPrice">175 kr</span></li>
+        <li class="mealItem"><span class="mealName">Ardishoki
+          <span class="mealPush popular">Popular</span></span>
+          <span class="mealDescription">Artichoke with lemon and garlic marinade</span>
+          <span class="mealPrice">99 kr</span></li>
+        <li class="mealItem"><span class="mealName">Mhamara</span>
+          <span class="mealDescription">Spicy bell pepper relish with crushed walnuts and pomegranate syrup</span><span class="mealPrice">123 kr</span></li>
+      </ul>
+    </div>
+
+<!---PAGE THREE--->
+
+    <div class="pageThree">
+      <div class="reservation">
+        <h2 class="bookYourTable">Book your table</h2>
+        <form class="reservationForm">
+          <div class="reservationInfo">
+            <label for="name" class="reservationLabel">Name</label>
+            <input type="text" id="name" class="reservationInput">
+            <label for="email" class="reservationLabel">Email</label>
+            <input type="email" id="email" class="reservationInput">
+            <label for="phone" class="reservationLabel">Phone</label>
+            <input type="number" id="phone" class="reservationInput">            
+            <label for="date" class="reservationLabel">Date</label>
+            <input type="date" id="date" class="reservationInput">
+            <label for="partySize" class="reservationLabel">Party size</label>
+            <input type="number" id="partySize" class="reservationInput">
+            <label for="allergies" class="reservationLabel">Allergies</label>
+            <input type="text" id="allergies" class="reservationInput">
+          </div>
+          <div class="reservationButtons">
+            <input type="reset" value="Cancel" class="reservationCancel">
+            <input type="submit" value="Request" class="reservationRequest">
+          </div>
+        </form>
+      </div>
+      <div class="contact">
+        <div class="contactInfo">
+          <div class="contactItems">
+            <div class="contactIcons">
+              <span class="material-symbols-outlined">call</span>
+              <span class="material-symbols-outlined">alternate_email</span>
+              <span class="material-symbols-outlined">location_on</span>         
+            </div>
+            <address class="contactText">
+            <a href="tel:+4681234567" class="reservationPhone">+46 8 123 45 67</a>
+            <a href="mailto:book@toughcookie.com" class="reservationEmail">book@toughcookie.com</a>
+            Brända Tomten 111 31 Stockholm
+            </address>
+          </div>
+          <img src="images/set-table.jpg" alt="A set dining table at a restaurant." width="3748" height="3726" loading="lazy" class="contactImage">
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="cookieText">You should accept cookies.</p>
+      <div class="cookieButtons">
+        <button class="cookieDecline">Decline</button>
+        <button class="cookieAccept">Accept</button>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

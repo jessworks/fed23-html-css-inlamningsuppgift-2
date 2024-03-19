@@ -1,0 +1,148 @@
+/*
+_________________________________
+___________HEADER________________
+_________________________________
+*/
+
+header {
+    width: 8.3vw;
+    height: 100vh;
+
+    input:checked + .menu nav {
+        margin-left: 8.3vw;
+    }
+    .menuItems {
+        font-size: 4rem;
+    }
+    h1 {
+        margin-left: 30px;
+        margin-top: 65px;
+        max-width: 25px;
+        word-break: break-all;
+
+        .desktopOnly {
+            display: block;
+        }
+    } 
+}
+
+/*
+______________________________
+_______PAGE ONE_______________
+______________________________
+*/
+
+.pageOne {
+    grid-template-columns: repeat(11, 1fr);
+    margin-left: 8.3vw;
+
+    .pageTitle {
+        grid-column: 2 / span 3;
+    }
+    .bodyTextOne {
+        grid-column: 5 / span 7;
+        font-size: 2.5rem;
+    }
+    .pageOneImage {
+        grid-column: 1 / span 5;
+            &:hover {
+                .arrowLettuce {
+                    bottom: 16px;
+                }
+            }
+
+        .arrowLettuce {
+            left: 9.5vw;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+    .bodyTextTwo { 
+        grid-column: 6 / span 7;
+        font-size: 2.5rem;
+
+        .bodyTextTwoNone {
+            display: inline;
+        }
+    }
+}
+
+/*
+_________________________________
+___________PAGE TWO______________
+_________________________________
+*/
+
+.pageTwo {
+    grid-template-columns: repeat(11, 1fr);
+    margin-left: 8.3vw;
+
+    .mealImageOne {
+        grid-column: 1 / span 3;
+    }
+    .mealImageTwo {
+        grid-column: 4 / span 4;
+    }
+    .mealImageThree {
+        grid-column: 8 / span 4;
+        display: inline;
+        object-fit: cover;
+    }
+    .mealList {
+        grid-column: 1 / span 11;
+
+        .mealItem {
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+            gap: 16px;
+
+            .mealName {
+                grid-column: 1 / span 4;
+            }
+            .mealDescription {
+                grid-column: 5 / span 6;
+            }
+            .mealPrice {
+                grid-column: 11 / span 1;
+            }
+        }
+    }
+}
+
+/*
+____________________________________
+____________PAGE THREE______________
+____________________________________
+*/
+
+.pageThree {
+    grid-template-columns: repeat(11, 1fr);
+    margin-left: 8.3vw;
+
+    .reservation {
+        grid-column: 1 / span 5;
+    }
+    .contact {
+        grid-column: 6 / span 6;
+    }
+}
+
+/*
+_________________________________
+___________FOOTER________________
+_________________________________
+*/
+
+footer {
+    .cookieText {
+        margin-left: 10vw;
+    }
+    .cookieButtons {
+
+        .cookieDecline {
+            width: 200px;
+        }
+        .cookieAccept {
+            width: 200px;
+        }
+    }
+}

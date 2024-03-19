@@ -1,0 +1,160 @@
+/*
+______________________________________
+__________HEADER______________________
+______________________________________
+*/
+
+ 
+
+/*
+______________________________________
+__________PAGE ONE____________________
+______________________________________
+*/
+
+.pageOne {
+    grid-template-columns: repeat(6, 1fr);
+    border-left: 16px solid #fff236;
+    border-right: 16px solid #fff236;
+    
+
+    .pageTitle {
+        grid-column: 1 / span 6;
+    }
+    .bodyTextOne {
+        grid-column: 1 / span 6;
+        font-size: 2rem;
+        margin-left: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .bodyTextOneNone {
+            display: inline;
+        }
+    }
+    .pageOneImage {
+        grid-column: 1 / span 3;
+        
+    }
+    .bodyTextTwo {
+        grid-column: 4 / span 3;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 2rem;
+        color: #aa75ff;
+        margin-left: 16px;
+        border-left: 16px solid #fff236;
+        
+
+        
+    }
+}
+
+/*
+_________________________________________
+___________PAGE TWO______________________
+_________________________________________
+*/
+
+.pageTwo {
+    grid-template-columns: repeat(6, 1fr);
+
+    .mealImageOne {
+        grid-column: 1 / span 3;
+    } 
+    .mealImageTwo {
+        grid-column: 4 / span 3;
+        display: inline;
+        object-fit: cover;
+    }
+    .mealList {
+        grid-column: 1 / span 6;
+
+        .mealItem {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            
+            .mealName {
+                grid-column: 1 / span 3;
+                font-size: 2rem;
+            }
+            .mealDescription {
+                grid-column: 1 / span 4;
+                font-size: 1.5rem;
+            }
+            .mealPrice {
+                grid-column: 6 / span 1;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+/*
+_________________________________________
+__________PAGE THREE_____________________
+_________________________________________
+*/
+
+.pageThree {
+    grid-template-columns: repeat(6, 1fr);
+    border-left: 16px solid #fff;
+    border-right: 16px solid #fff;
+
+    .reservation {
+        grid-column: 2 / span 4;
+
+       
+        .reservationInfo {
+            display: unset;
+
+            .reservationLabel {
+                float: left;
+                width: 40%;
+            }
+            .reservationInput {
+                float: right;
+                width: 60%;
+            }
+        }
+        
+    }
+    .contact {
+        grid-column: 2 / span 4;
+    }
+}
+
+/*
+______________________________________
+____________FOOTER____________________
+______________________________________
+*/
+
+footer {
+    display: flex;
+    
+    .cookieText {
+        font-size: 1.4rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .cookieButtons {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        .cookieDecline {
+        font-size: 2rem;
+        width: 150px;
+        
+        }
+        .cookieAccept {
+        font-size: 2rem;
+        width: 150px;
+        
+        }
+    }
+}

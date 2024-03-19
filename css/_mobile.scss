@@ -1,0 +1,472 @@
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*
+__________________________________
+______________HEADER______________
+__________________________________
+*/
+
+header {
+    background-color: black;
+    position:fixed;
+    width: 100vw;
+    z-index: 99;
+
+    .burgerClick {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        width: 35px;
+        height: 35px;
+        opacity: 0;
+    }
+        .burger {
+            width: 35px;
+            height: 35px;
+            background : transparent;
+            border: 0;
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 2;
+            pointer-events: none;
+        
+            input:checked + .menu .burger .burgerBars { 
+                position: absolute;
+                transition: all 0.3s ease-in-out;
+            }
+            input:checked + .menu .burger .burgerBars:nth-child(2) {
+                opacity: 0;
+            }
+            input:checked + .menu .burger .burgerBars:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            input:checked + .menu .burger .burgerBars:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+            .burgerBars {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #fff236;
+                border-radius: 6px;
+                margin-bottom: 4px;   
+            }
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #aa75ff;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            visibility: hidden;
+        }
+        input:checked + .menu nav {
+            visibility: visible;
+            opacity: 1;
+            }
+            .menuItems {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-family: 'Jockey One', sans-serif;
+                font-size: 3rem;
+                text-transform: uppercase;
+                color: white;
+                display: grid;
+                grid-template-rows: repeat(11, 1fr);
+
+                .home {
+                    grid-row: 5 / span 1;
+                }
+                .menu {
+                    grid-row: 6 / span 1;
+                }
+                .bookTable {
+                    grid-row: 7 / span 1;
+                }
+            }
+    h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        color: white;
+    }
+}
+
+/*
+_____________________________________
+____________PAGE ONE_________________
+_____________________________________
+*/
+
+.pageOne{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    min-height: 100vh;
+    background-color: #000;
+    border-left: 10px solid #fff236;
+    border-right: 10px solid #fff236;
+    
+    .pageTitle {
+        grid-column: 1 / span 4;
+        font-family: 'Jockey One', sans-serif;
+        text-transform: uppercase;
+        position: relative;
+        min-width: 300px;
+        min-height: 150px;
+        margin-top: 50px;
+
+        .pageTitleItems {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+            .drizzle, .chickpeas {
+                position: absolute;
+            }
+            .tahini {
+                color:#00ff38;
+                font-size: 4rem;;
+            }
+            .drizzle {
+                color:#aa75ff;
+                top: -10px;
+                right: 1px;
+                font-size: 1.55rem;
+            }
+            .chickpeas {
+                color:#fff236;
+                left: 8.25px;
+                bottom: -5px;
+                font-size: 1.55rem;
+                z-index: -1;
+            }
+        }
+    }
+    .bodyTextOne { 
+        grid-column: 1 / span 4;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 1.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0;
+        color: #00ff38;
+
+        .bodyTextOneNone {
+            display: none;
+        }
+    }
+    .pageOneImage {
+        grid-column: 1 / span 4;
+        overflow: hidden;
+        
+        .imageLettuce {
+            position: relative;
+        }
+        .arrowLettuce {
+            transform: rotate(90deg);
+            position: absolute;
+            width: 60px;
+            height: 70px;
+            bottom: 8px;
+            left: 8px;
+        }
+    }
+    .bodyTextTwo {
+        grid-column: 1 / span 4;
+        font-family: 'Jockey One', sans-serif;
+        font-size: 1.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0;
+        color:#aa75ff;
+        background-color: #fff;
+
+        .bodyTextTwoNone {
+            display: none;
+        }
+        .explore {
+            text-transform: uppercase;
+            color: black;
+        
+            .arrowExplore {
+                width: 34px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+/*
+______________________________________
+________PAGE TWO______________________
+______________________________________
+*/
+
+.pageTwo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    min-height: 100vh;
+    background-color: #fff236;
+    border-left: 10px solid #fff236;
+    border-right: 10px solid #fff236;
+        
+    .mealImageOne {
+        grid-column: 1 / span 4;
+        object-fit: cover;
+
+    }
+    .mealImageTwo {
+        display: none;
+    }
+    .mealImageThree {
+        display: none;
+    }
+    .mealList {
+        grid-column: 1 / span 4;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        .mealItem {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            padding-top: 0;
+            border-top: 4px solid #000;
+            border-bottom: 4px solid #000;
+            margin-bottom: 8px;
+            background-color: #fff;
+            color:#000;
+        
+            .mealName {
+                grid-column: 1 / span 4;
+                font-family: 'Jockey One', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.5rem;;
+
+                .mealPush {
+                    font-family: 'Courier Prime', monospace;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    padding-left: 8px;
+                    padding-top: 2px;
+                    padding-right:8px;
+                    margin-left: 15px;
+                }
+                    .newPurple {
+                        background-color: #aa75ff;
+                        display: inline-block;
+                        transform: rotate(3deg);
+                        .new {
+                            display: block;
+                            transform: rotate(-3deg);
+                        }
+                    }
+                    .veganGreen {
+                        background-color: #00ff38;
+                        display: inline-block;
+                        transform: rotate(-5deg);
+                        .vegan {
+                            display: block;
+                            transform: rotate(5deg);
+                        }
+                    }
+                    .popular {
+                        background-color: #fff236;
+                    }
+            }
+            .mealDescription {
+                grid-column: 1 / span 3;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 1.2rem;
+            }
+            .mealPrice {
+                grid-column: 4 / span 1;
+                text-align: right;
+                font-family: 'Jockey One', sans-serif;
+                font-size: 1.5rem;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+/*
+_____________________________________
+__________PAGE THREE_________________
+_____________________________________
+*/
+
+.pageThree {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    background-color: #00ff38;
+    min-height: 100vh;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+    
+
+    .reservation {
+        grid-column: 1 / span 4;
+        font-family: 'Jockey One', sans-serif;
+        text-transform: uppercase;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 100px;
+        margin-bottom: 0;
+
+        .bookYourTable {
+            font-size: 2rem;
+        }
+        .reservationInfo {
+            display: flex;
+            flex-direction: column;
+        }
+        .reservationLabel {
+            font-size: 1.5rem;
+        }
+        .reservationInput {
+            border: 1px solid white;
+            border-radius: 7px;
+        }
+        .reservationButtons {
+            display: flex;
+            justify-content: space-between;
+            .reservationCancel {
+                font-family: 'Jockey One', sans-serif;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                background-color: #aa75ff;
+                border: 1px solid #aa75ff;
+                border-radius: 9px;
+                width: 100px;
+            }
+            .reservationRequest {
+                font-family: 'Jockey One', sans-serif;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                background-color: #fff236;
+                border: 1px solid #fff236;
+                border-radius: 9px;
+                width: 100px;
+            }
+                
+        }
+    }
+    .contact {
+        grid-column: 1 / span 4;
+        margin-left: 50px;
+        margin-right: 50px;
+            
+        .contactInfo { 
+            
+            .contactItems {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                transform: translate(0, 250%);
+                z-index: 3;
+                font-family: 'Jockey One', sans-serif;
+                color:#26bcea;
+                text-shadow: black -1px -1px;
+
+                .contactIcons {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 17px;
+                }
+                address {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left:20px;
+                    font-size: 1.2rem;
+                    line-height: 1.2;
+                }
+                .reservationPhone {
+                    color: #26bcea;
+                }
+                .reservationEmail {
+                    color: #26bcea;
+                }
+            }
+            .contactImage {
+                object-fit: cover;
+                filter: blur(2px);
+            }
+        }
+    }
+}
+
+/*
+________________________________
+_________FOOTER_________________
+________________________________
+*/
+
+footer {
+    position: sticky;
+    width: 100vw;
+    margin-bottom: 0;
+    z-index: 99;
+    background-color: #aa75ff;
+        
+    .cookieText {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 15px;
+        color: white;
+    }
+    .cookieButtons {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+
+        .cookieDecline {
+            font-family: 'Jockey One', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            background-color:#fff236;
+            border: 1px solid #fff236;
+            border-radius: 9px;
+            margin-right: 15px;
+            width: 100px;
+        }
+        .cookieAccept {
+            font-family: 'Jockey One', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            background-color:#00ff38;
+            border: 1px solid #00ff38;
+            border-radius: 9px;
+            width: 100px;
+        }
+    }
+
+}
